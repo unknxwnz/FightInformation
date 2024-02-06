@@ -105,7 +105,10 @@ final class Loader extends PluginBase
      */
     public function getClicks(Player $player): int
     {
-        return $this->clicks[strtolower($player->getName())][0] ?? 0;
+        $playerName = strtolower($player->getName());
+        list($clicks, $lastTime) = $this->clicks[$playerName];
+
+        return $lastTime === time() ? $clicks : 0;
     }
 
     /**

@@ -24,7 +24,7 @@ final class FightInfoSchedule extends Task
             }
 
             $playerTag = $plugin->getPlayerNameTag($player);
-            $ping = method_exists(Player::class, 'getPing()') ? $player->getPing() : '§c×';
+            $ping = method_exists(Player::class, 'getPing') ? $player->getPing() : '§c×';
 
             /** @var string[] */
             $formattedName = str_ireplace(
