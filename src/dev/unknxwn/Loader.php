@@ -48,7 +48,7 @@ final class Loader extends PluginBase
         $server = $this->getServer();
         $server->getPluginManager()->registerEvents(new EventListener, $this);
         if (Settings::get()->isShowInfoOnPlayerName()) {
-            $server->getScheduler()->scheduleRepeatingTask(new FightInfoSchedule, 20);
+            $server->getScheduler()->scheduleRepeatingTask(new FightInfoSchedule, 1);
         }
 
         $this->pureChatPlugin = $server->getPluginManager()->getPlugin('PureChat') ?? null;
