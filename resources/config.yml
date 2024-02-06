@@ -1,0 +1,33 @@
+#
+# Fight Information Config
+# 
+# Copyright (C) 2024 - Unknxwn.
+# Discord: Unknown#4000
+
+###
+# WARNING: The plugin only supports the tag plugin from 64FF00 (PurePerms, PureChat); if using another, the player's tag will not appear alongside their name.
+###
+
+# Worlds where the system will operate. Leave empty ([]) to operate in all worlds.
+worlds:
+  - 'world'
+
+# Show info in the player's name?
+show-info-on-player-name: true
+
+# {name}: Player name (includes the tag if the server uses PureChat and PurePerms plugin)
+# {health}: Player health
+# {maxhealth}: Player max health
+# {cps}: Player clicks per second
+# {ping}: Player ping -- NOTE: The ping will only work if the API you are using supports the getPing() function, such as Kyoto.
+format-of-info-in-player-name:
+  - '{name} §c{health}'
+  - '§6{cps} §fCPS §7| §6{ping} §fMS'
+
+# Send a popup with fight info to the player?
+show-fight-info-popup-from-player: true
+
+# {cps}: Player clicks per second
+# {combo}: Consecutive hits that the player gave the target
+# {reach}: Distance the player is hitting
+format-fight-info-popup: '§6CPS: §f{cps} §8| §6COMBO: §f{combo} §8| §6REACH: §f{reach}'
